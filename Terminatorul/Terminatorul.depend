@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1617893275 source:c:\users\student\desktop\git-proj\terminatorul\main.cpp
+	<iostream>
+	<windows.h>
+	<conio.h>
+
