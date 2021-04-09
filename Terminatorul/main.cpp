@@ -11,7 +11,5 @@ int my_random(int a, int b)
 }
 int main()
 {
-    int randnr = my_random(0, 10);
-    cout << randnr << endl;
     return 0;
 }
