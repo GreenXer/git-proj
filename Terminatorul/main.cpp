@@ -2,16 +2,56 @@
 #include <iostream>
 #include <random>
 #include <ctime>
+#include <windows.h>
+#include <conio.h>
 
 using namespace std;
+
 int my_random(int a, int b)
 {
     std::srand(std::time(nullptr));
     return  1 + std::rand() % (45);
 }
+
+int tinta = 30;
+
+void setup()
+{
+    cout << "D>>";
+    for(int i = 1; i < tinta; i++)
+        cout << " ";
+    cout << "O A" << endl;
+}
+
+void core()
+{
+    int x;
+    setup();
+    cin >> x;
+    cout << endl;
+    system("CLS");
+    setup();
+    cout << "D>>";
+    for(int i = 1; i < x; i++)
+    {
+        if(i == tinta || i == tinta + 2)
+            cout << "&";
+        else
+            cout << "-";
+        Sleep(40);
+    }
+    cout << "X" << endl;
+
+    if(x == tinta || x == tinta + 1)
+        cout << "Ai castigat" << endl;
+    else
+        cout << "Ai pierdut" << endl;
+}
+
 int main()
 {
-    int randnr = my_random(0, 10);
-    cout << randnr << endl;
-    return 0;
+    core();
+    getch();
+    system("CLS");
+    return main();
 }
