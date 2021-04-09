@@ -9,11 +9,11 @@ using namespace std;
 
 int my_random(int a, int b)
 {
-    std::srand(std::time(nullptr));
-    return  1 + std::rand() % (45);
+    srand(time(nullptr));
+    return  1 + rand() % (45);
 }
 
-int tinta = 30;
+int tinta = my_random(1, 45);
 
 void setup()
 {
