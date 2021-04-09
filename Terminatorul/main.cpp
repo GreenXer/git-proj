@@ -13,9 +13,8 @@ int my_random(int a, int b)
     return  1 + rand() % (45);
 }
 
-int tinta = my_random(1, 45);
 
-void setup()
+void setup(int tinta)
 {
     cout << "D>>";
     for(int i = 1; i < tinta; i++)
@@ -23,14 +22,14 @@ void setup()
     cout << "O A" << endl;
 }
 
-void core()
+void core(int tinta)
 {
     int x;
-    setup();
+    setup(tinta);
     cin >> x;
     cout << endl;
     system("CLS");
-    setup();
+    setup(tinta);
     cout << "D>>";
     for(int i = 1; i < x; i++)
     {
@@ -50,7 +49,8 @@ void core()
 
 int main()
 {
-    core();
+    int tinta = my_random(1, 45);
+    core(tinta);
     getch();
     system("CLS");
     return main();
